@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asistente de compras - EfficientShop</title>
+    <link rel="stylesheet" href="/assets/styles/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+MX:wght@100..400&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/assets/img/logos/logobolsa.png" type="image/x-icon">
+</head>
+<body>
+    <nav>
+        <header>
+            <img onclick="abrir_menu();" class="icono_hamburguesa" src="/assets/img/icons/menu_hamburguesa.png" alt="Menú Hamburguesa">
+            <div class="menu_hamburguesa visible" id="abrir_menu">
+                <img onclick="cerrar_menu();" src="/assets/img/icons/cerrar.png" alt="Ícono Cerrar">
+                <ul>
+                    <li><a href="">Contacto</a></li>
+                    <!--<li><button>COMENZAR</button></li>-->
+                </ul>
+                <img src="/assets/img/logos/facebook.png" alt="Ícono Facebook">
+                <img src="/assets/img/logos/instagram.png" alt="Ícono Instagram">
+                <img src="/assets/img/logos/youtube.png" alt="Ícono Youtube">
+                <h5>Desarrollado por <br> <a href="#">Estanislao Salinas Previte</a></h5>
+            </div>
+            <div class="nav_links">
+                <ul>
+                    <li><a href="#"><img src="/assets/img/icons/inicio.png" alt="Ícono Inicio"></a></li>
+                    <li><a href="">Contacto</a></li>
+                    <!--<li><button>COMENZAR</button></li>-->
+                </ul>
+            </div>
+        </header>
+    </nav>
+    <main>
+        <section class="logo_titulo">
+            <img src="/assets/img/logos/logo_eficientshop.png" alt="Logo ">
+            <h1>un asistente para tu día a día</h1>
+        </section>
+        <section class="cont_categorias" id="cont_categorias">
+            <h2>Categorías</h2>
+            <ul>
+                <li>
+                    <img src="/assets/img/icons/icon_frutas.png" alt="Ícono Frutas & Verduras">
+                    <button data-category="contFrutas" onclick="abrirCategoria(event);">Frutas & Verduras</button>
+                </li>
+                <li>
+                    <img src="/assets/img/icons/lacteos.png" alt="Ícono Lacteos & Huevos">
+                    <button data-category="contLacteos" onclick="abrirCategoria(event);">Lacteos & Huevos</button>
+                </li>
+                <li>
+                    <img src="/assets/img/icons/carne.png" alt="Ícono Carnes & Pescados">
+                    <button data-category="contCarnes" onclick="abrirCategoria(event);">Carnes & Pescados</button>
+                </li>
+                <li>
+                    <img src="/assets/img/icons/un-pan.png" alt="Ícono Panaderia">
+                    <button data-category="contPanaderia" onclick="abrirCategoria(event);">Panadería</button>
+                </li>
+                <li>
+                    <img src="/assets/img/icons/icon_congelados.png" alt="Ícono Congelados">
+                    <button data-category="contCongelados" onclick="abrirCategoria(event);">Congelados</button>
+                </li>
+                <li>
+                    <img src="/assets/img/icons/frascos.png" alt="Ícono Frascos">
+                    <button data-category="contConservas" onclick="abrirCategoria(event);">Conservas & Frascos</button>
+                </li>
+                <li>
+                    <img src="/assets/img/icons/cereales.png" alt="Ícono Cereales">
+                    <button data-category="contCereal" onclick="abrirCategoria(event);">Cereales & Granos</button>
+                </li>
+                <li>
+                    <img src="/assets/img/icons/mani.png" alt="Ícono Frutos Secos">
+                    <button data-category="contLegumbres" onclick="abrirCategoria(event);">Legumbres & Frutos Secos</button>
+                </li>
+                <li>
+                    <img src="/assets/img/icons/refresco.png" alt="Ícono Bebidas">
+                    <button data-category="contBebidas" onclick="abrirCategoria(event);">Bebidas</button>
+                </li>
+                <li>
+                    <img src="/assets/img/icons/icon_snacks.png" alt="Ícono Snacks">
+                    <button data-category="contSnacks" onclick="abrirCategoria(event);">Snacks & Golosinas</button>
+                </li>
+                <li>
+                    <img src="/assets/img/icons/especias.png" alt="Ícono Condimentos">
+                    <button data-category="contCondimentos" onclick="abrirCategoria(event);">Condimentos</button>
+                </li>
+                <li>
+                    <img src="/assets/img/icons/limpieza.png" alt="Ícono Limpieza">
+                    <button data-category="contLimpieza" onclick="abrirCategoria(event);">Limpieza & Hogar</button>
+                </li>
+                <li>
+                    <img src="/assets/img/icons/icon_mascotas.png" alt="Ícono Mascotas">
+                    <button data-category="contMascotas" onclick="abrirCategoria(event);">Mascotas</button>
+                </li>
+                <li>
+                    <img src="/assets/img/icons/coche.png" alt="Ícono Vehículo">
+                    <button data-category="contVehiculo" onclick="abrirCategoria(event);">Vehículo</button>
+                </li>
+                <li>
+                    <img src="/assets/img/icons/otros.png" alt="Ícono Otros">
+                    <button data-category="contOtros" onclick="abrirCategoria(event);">Otros</button>
+                </li>
+            </ul>
+            </section>
+                <!--Frutas & Verduras-->
+                <div class="cont_frutas_verduras" id="cont_frutas_verduras">
+                    <div class="cont_superior_titulo">
+                        <button onclick="regresar();" class="btn_regresar" id="btn_regresar"><img src="/assets/img/icons/angulo-izquierdo.png" alt="Ángulo Izquierdo"></button>
+                        <h1>Frutas & Verduras</h1>
+                    </div>
+                    <div class="cont_agregar">
+                        <form id="form_frutas">
+                            <input type="number" name="cantidadFrutas" id="cantidadFrutas" required placeholder="1,2,3" min="1">
+                            <input type="text" name="productoFrutas" id="productoFrutas" required placeholder="Agregar nuevo producto">
+                            <button onclick="frutas();" class="btn_agregar" type="submit">AGREGAR</button>
+                        </form>
+                    </div>
+                    <div class="cont_lista">
+                        <ul id="lista_frutas">
+
+                        </ul>
+                    </div>
+                    <div class="vacioFrutas">
+                        <p>Aún no tienes productos</p>
+                    </div>
+                </div>
+                <!--Lacteos & Huevos-->
+                <div class="cont_lacteos_huevo" id="cont_lacteos_huevo">
+                    <div class="cont_superior_titulo">
+                        <button onclick="regresar();" class="btn_regresar" id="btn_regresar"><img src="/assets/img/icons/angulo-izquierdo.png" alt="Ángulo Izquierdo"></button>
+                        <h1>Lacteos & Huevos</h1>
+                    </div>
+                    <div class="cont_agregar">
+                        <form id="form_lacteos">
+                            <input type="number" name="cantidadLacteos" id="cantidadLacteos" required placeholder="1,2,3" min="1">
+                            <input type="text" name="productoLacteos" id="productoLacteos" required placeholder="Agregar nuevo producto">
+                            <button onclick="lacteos();" class="btn_agregar" type="submit">AGREGAR</button>
+                        </form>
+                    </div>
+                    <div class="cont_lista">
+                        <ul id="lista_lacteos">
+        
+                        </ul>
+                    </div>
+                    <div class="vacioLacteos">
+                        <p>Aún no tienes productos</p>
+                    </div>
+                </div>    
+                <!--Carnes & Pescados-->
+                <div class="cont_carnes_pescado" id="cont_carnes_pescado">
+                    <div class="cont_superior_titulo">
+                        <button onclick="regresar();" class="btn_regresar" id="btn_regresar"><img src="/assets/img/icons/angulo-izquierdo.png" alt="Ángulo Izquierdo"></button>
+                        <h1>Carnes & Pescado</h1>
+                    </div>
+                    <div class="cont_agregar">
+                        <form id="form_carnes">
+                            <input type="number" name="cantidadCarnes" id="cantidadCarnes" required placeholder="1,2,3">
+                            <input type="text" name="productoCarnes" id="productoCarnes" required placeholder="Agregar nuevo producto">
+                            <button onclick="carnes();" class="btn_agregar" type="submit">AGREGAR</button>
+                        </form>
+                    </div>
+                    <div class="cont_lista">
+                        <ul id="lista_carnes">
+    
+                        </ul>
+                    </div>
+                    <div class="vacioCarnes">
+                        <p>Aún no tienes productos</p>
+                    </div>
+                </div>
+                <!--Panaderia-->
+                <div class="cont_panaderia" id="cont_panaderia">
+                    <div class="cont_superior_titulo">
+                        <button onclick="regresar();" class="btn_regresar" id="btn_regresar"><img src="/assets/img/icons/angulo-izquierdo.png" alt="Ángulo Izquierdo"></button>
+                        <h1>Panadería</h1>
+                    </div>
+                    <div class="cont_agregar">
+                        <form id="form_panaderia">
+                            <input type="number" name="cantidadPanaderia" id="cantidadPanaderia" required placeholder="1,2,3">
+                            <input type="text" name="productoPanaderia" id="productoPanaderia" required placeholder="Agregar nuevo producto">
+                            <button onclick="panaderia();" class="btn_agregar" type="submit">AGREGAR</button>
+                        </form>
+                    </div>
+                    <div class="cont_lista">
+                        <ul id="lista_panaderia">
+    
+                        </ul>
+                    </div>
+                    <div class="vacioPanaderia">
+                        <p>Aún no tienes productos</p>
+                    </div>
+                </div>
+                <!--Congelados-->
+                <div class="cont_congelados" id="cont_congelados">
+                    <div class="cont_superior_titulo">
+                        <button onclick="regresar();" class="btn_regresar" id="btn_regresar"><img src="/assets/img/icons/angulo-izquierdo.png" alt="Ángulo Izquierdo"></button>
+                        <h1>Congelados</h1>
+                    </div>
+                    <div class="cont_agregar">
+                        <form id="form_congelados">
+                            <input type="number" name="cantidadCongelados" id="cantidadCongelados" required placeholder="1,2,3">
+                            <input type="text" name="productoCongelados" id="productoCongelados" required placeholder="Agregar nuevo producto">
+                            <button onclick="congelados();" class="btn_agregar" type="submit">AGREGAR</button>
+                        </form>
+                    </div>
+                    <div class="cont_lista">
+                        <ul id="lista_congelados">
+    
+                        </ul>
+                    </div>
+                    <div class="vacioCongelados">
+                        <p>Aún no tienes productos</p>
+                    </div>
+                </div>
+                <!--Conservas & Frutas-->
+                <div class="cont_conservas_frascos" id="cont_conservas_frascos">
+                    <div class="cont_superior_titulo">
+                        <button onclick="regresar();" class="btn_regresar" id="btn_regresar"><img src="/assets/img/icons/angulo-izquierdo.png" alt="Ángulo Izquierdo"></button>
+                        <h1>Conservas & Frascos</h1>
+                    </div>
+                    <div class="cont_agregar">
+                        <form id="form_conservas">
+                            <input type="number" name="cantidadConservas" id="cantidadConservas" required placeholder="1,2,3">
+                            <input type="text" name="productoConservas" id="productoConservas" required placeholder="Agregar nuevo producto">
+                            <button onclick="conservas();" class="btn_agregar" type="submit">AGREGAR</button>
+                        </form>
+                    </div>
+                    <div class="cont_lista">
+                        <ul id="lista_conservas">
+    
+                        </ul>
+                    </div>
+                    <div class="vacioConservas">
+                        <p>Aún no tienes productos</p>
+                    </div>
+                </div>
+                <!--Cereales & Granos-->
+                <div class="cont_cereales" id="cont_cereal_granos">
+                    <div class="cont_superior_titulo">
+                        <button onclick="regresar();" class="btn_regresar" id="btn_regresar"><img src="/assets/img/icons/angulo-izquierdo.png" alt="Ángulo Izquierdo"></button>
+                        <h1>Cereales & Granos</h1>
+                    </div>
+                    <div class="cont_agregar">
+                        <form id="form_cereal">
+                            <input type="number" name="cantidadCereal" id="cantidadCereal" required placeholder="1,2,3">
+                            <input type="text" name="productoCereal" id="productoCereal" required placeholder="Agregar nuevo producto">
+                            <button onclick="cereales();" class="btn_agregar" type="submit">AGREGAR</button>
+                        </form>
+                    </div>
+                    <div class="cont_lista">
+                        <ul id="lista_cereal">
+    
+                        </ul>
+                    </div>
+                    <div class="vacioCereal">
+                        <p>Aún no tienes productos</p>
+                    </div>
+                </div>
+                <!--Legumbres & Frutos Secos-->
+                <div class="cont_legumbres" id="cont_legumbres">
+                    <div class="cont_superior_titulo">
+                        <button onclick="regresar();" class="btn_regresar" id="btn_regresar"><img src="/assets/img/icons/angulo-izquierdo.png" alt="Ángulo Izquierdo"></button>
+                        <h1>Legumbres & F. Secos</h1>
+                    </div>
+                    <div class="cont_agregar">
+                        <form id="form_legumbres">
+                            <input type="number" name="cantidadLegumbres" id="cantidadLegumbres" required placeholder="1,2,3">
+                            <input type="text" name="productoLegumbres" id="productoLegumbres" required placeholder="Agregar nuevo producto">
+                            <button onclick="legumbres();" class="btn_agregar" type="submit">AGREGAR</button>
+                        </form>
+                    </div>
+                    <div class="cont_lista">
+                        <ul id="lista_legumbres">
+    
+                        </ul>
+                    </div>
+                    <div class="vacioLegumbres">
+                        <p>Aún no tienes productos</p>
+                    </div>
+                </div>
+                <!--Bebidas-->
+                <div class="cont_bebidas" id="cont_bebidas">
+                    <div class="cont_superior_titulo">
+                        <button onclick="regresar();" class="btn_regresar" id="btn_regresar"><img src="/assets/img/icons/angulo-izquierdo.png" alt="Ángulo Izquierdo"></button>
+                        <h1>Bebidas</h1>
+                    </div>
+                    <div class="cont_agregar">
+                        <form id="form_bebidas">
+                            <input type="number" name="cantidadBebidas" id="cantidadBebidas" required placeholder="1,2,3">
+                            <input type="text" name="productoBebidas" id="productoBebidas" required placeholder="Agregar nuevo producto">
+                            <button onclick="bebidas();" class="btn_agregar" type="submit">AGREGAR</button>
+                        </form>
+                    </div>
+                    <div class="cont_lista">
+                        <ul id="lista_bebidas">
+    
+                        </ul>
+                    </div>
+                    <div class="vacioBebidas">
+                        <p>Aún no tienes productos</p>
+                    </div>
+                </div>
+                <!--Snacks & Golosinas-->
+                <div class="cont_snacks" id="cont_snacks">
+                    <div class="cont_superior_titulo">
+                        <button onclick="regresar();" class="btn_regresar" id="btn_regresar"><img src="/assets/img/icons/angulo-izquierdo.png" alt="Ángulo Izquierdo"></button>
+                        <h1>Snacks & Golosinas</h1>
+                    </div>
+                    <div class="cont_agregar">
+                        <form id="form_snacks">
+                            <input type="number" name="cantidadSnacks" id="cantidadSnacks" required placeholder="1,2,3">
+                            <input type="text" name="productoSnacks" id="productoSnacks" required placeholder="Agregar nuevo producto">
+                            <button onclick="snacks();" class="btn_agregar" type="submit">AGREGAR</button>
+                        </form>
+                    </div>
+                    <div class="cont_lista">
+                        <ul id="lista_snacks">
+    
+                        </ul>
+                    </div>
+                    <div class="vacioSnacks">
+                        <p>Aún no tienes productos</p>
+                    </div>
+                </div>
+                <!--Condimentos-->
+                <div class="cont_condimentos" id="cont_condimentos">
+                    <div class="cont_superior_titulo">
+                        <button onclick="regresar();" class="btn_regresar" id="btn_regresar"><img src="/assets/img/icons/angulo-izquierdo.png" alt="Ángulo Izquierdo"></button>
+                        <h1>Condimentos</h1>
+                    </div>
+                    <div class="cont_agregar">
+                        <form id="form_condimentos">
+                            <input type="number" name="cantidadCondimentos" id="cantidadCondimentos" required placeholder="1,2,3">
+                            <input type="text" name="productoCondimentos" id="productoCondimentos" required placeholder="Agregar nuevo producto">
+                            <button onclick="condimentos();" class="btn_agregar" type="submit">AGREGAR</button>
+                        </form>
+                    </div>
+                    <div class="cont_lista">
+                        <ul id="lista_condimentos">
+    
+                        </ul>
+                    </div>
+                    <div class="vacioCondimentos">
+                        <p>Aún no tienes productos</p>
+                    </div>
+                </div>
+                <!--Limpieza & Hogar-->
+                <div class="cont_limpieza" id="cont_limpieza">
+                    <div class="cont_superior_titulo">
+                        <button onclick="regresar();" class="btn_regresar" id="btn_regresar"><img src="/assets/img/icons/angulo-izquierdo.png" alt="Ángulo Izquierdo"></button>
+                        <h1>Limpieza & Hogar</h1>
+                    </div>
+                    <div class="cont_agregar">
+                        <form id="form_limpieza">
+                            <input type="number" name="cantidadLimpieza" id="cantidadLimpieza" required placeholder="1,2,3">
+                            <input type="text" name="productoLimpieza" id="productoLimpieza" required placeholder="Agregar nuevo producto">
+                            <button onclick="limpieza();" class="btn_agregar" type="submit">AGREGAR</button>
+                        </form>
+                    </div>
+                    <div class="cont_lista">
+                        <ul id="lista_limpieza">
+    
+                        </ul>
+                    </div>
+                    <div class="vacioLimpieza">
+                        <p>Aún no tienes productos</p>
+                    </div>
+                </div>
+                <!--Mascotas-->
+                <div class="cont_mascotas" id="cont_mascotas">
+                    <div class="cont_superior_titulo">
+                        <button onclick="regresar();" class="btn_regresar" id="btn_regresar"><img src="/assets/img/icons/angulo-izquierdo.png" alt="Ángulo Izquierdo"></button>
+                        <h1>Mascotas</h1>
+                    </div>
+                    <div class="cont_agregar">
+                        <form id="form_mascotas">
+                            <input type="number" name="cantidadMascotas" id="cantidadMascotas" required placeholder="1,2,3">
+                            <input type="text" name="productoMascotas" id="productoMascotas" required placeholder="Agregar nuevo producto">
+                            <button onclick="mascotas();" class="btn_agregar" type="submit">AGREGAR</button>
+                        </form>
+                    </div>
+                    <div class="cont_lista">
+                        <ul id="lista_mascotas">
+    
+                        </ul>
+                    </div>
+                    <div class="vacioMascotas">
+                        <p>Aún no tienes productos</p>
+                    </div>
+                </div>
+                <!--Vehiculo-->
+                <div class="cont_vehiculo" id="cont_vehiculo">
+                    <div class="cont_superior_titulo">
+                        <button onclick="regresar();" class="btn_regresar" id="btn_regresar"><img src="/assets/img/icons/angulo-izquierdo.png" alt="Ángulo Izquierdo"></button>
+                        <h1>Vehículo</h1>
+                    </div>
+                    <div class="cont_agregar">
+                        <form id="form_vehiculo">
+                            <input type="number" name="cantidadVehiculo" id="cantidadVehiculo" required placeholder="1,2,3">
+                            <input type="text" name="productoVehiculo" id="productoVehiculo" required placeholder="Agregar nuevo producto">
+                            <button onclick="vehiculo();" class="btn_agregar" type="submit">AGREGAR</button>
+                        </form>
+                    </div>
+                    <div class="cont_lista">
+                        <ul id="lista_vehiculo">
+    
+                        </ul>
+                    </div>
+                    <div class="vacioVehiculo">
+                        <p>Aún no tienes productos</p>
+                    </div>
+                </div>
+                <!--Otros-->
+                <div class="cont_otros" id="cont_otros">
+                    <div class="cont_superior_titulo">
+                        <button onclick="regresar();" class="btn_regresar" id="btn_regresar"><img src="/assets/img/icons/angulo-izquierdo.png" alt="Ángulo Izquierdo"></button>
+                        <h1>Otros</h1>
+                    </div>
+                    <div class="cont_agregar">
+                        <form id="form_otros">
+                            <input type="number" name="cantidadOtros" id="cantidadOtros" required placeholder="1,2,3">
+                            <input type="text" name="productoOtros" id="productoOtros" required placeholder="Agregar nuevo producto">
+                            <button onclick="otros();" class="btn_agregar" type="submit">AGREGAR</button>
+                        </form>
+                    </div>
+                    <div class="cont_lista">
+                        <ul id="lista_otros">
+    
+                        </ul>
+                    </div>
+                    <div class="vacioOtros">
+                        <p>Aún no tienes productos</p>
+                    </div>
+                </div>
+            </div>
+        <script src="/app.js"></script>
+    </main>
+    <footer>
+        <div class="cont_redes" id="cont_redes">
+            <img src="/assets/img/logos/facebook.png" alt="Ícono Facebook">
+            <img src="/assets/img/logos/instagram.png" alt="Ícono Instagram">
+            <img src="/assets/img/logos/youtube.png" alt="Ícono Youtube">
+        </div>
+        <h5 id="dev_by">Desarrollado por <a href="#">Estanislao Salinas Previte</a></h5>
+    </footer>
+</body>
+</html>
